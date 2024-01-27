@@ -29,10 +29,16 @@ def not_found(e):
 
 api = Api(app)
 
+@app.route('/')
+@app.route('/<int:id>')
+def index(id=0):
+    return render_template("index.html")
+
 class Birds(Resource):
 
     def get(self):
         birds = [bird.to_dict() for bird in Bird.query.all()]
+        #print(birds);
         return make_response(jsonify(birds), 200)
 
     def post(self):

@@ -1,6 +1,6 @@
 """add column image
 
-Revision ID: 2739c2b577b9
+Revision ID: 1cff9a605dcf
 Revises: 6034d52c059f
 Create Date: 2022-10-17 10:10:53.451432
 
@@ -9,8 +9,8 @@ from alembic import op
 import sqlalchemy as sa
 
 
-# revision identifiers, used by Alembic.
-revision = '2739c2b577b9'
+# revision identifiers, used by Alembic.#1cff9a605dcf new old: 2739c2b577b9
+revision = '1cff9a605dcf'
 down_revision = '6034d52c059f'
 branch_labels = None
 depends_on = None

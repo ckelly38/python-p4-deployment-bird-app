@@ -11,6 +11,7 @@ function BirdPage() {
     fetch("/birds")
       .then((r) => r.json())
       .then((birdsArray) => {
+        //console.log("birdsArray = ", birdsArray);
         setBirds(birdsArray);
       });
   }, []);
@@ -19,12 +20,13 @@ function BirdPage() {
     const updatedBirdsArray = [...birds, newBird];
     setBirds(updatedBirdsArray);
   }
+  //console.log("birds = ", birds);
 
   const displayedBirds = birds.filter((bird) => {
     return bird.name.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
-if(!birds) return <h1>...loading</h1>
+  if(!birds) return <h1>...loading</h1>
 
   return (
     <main>
